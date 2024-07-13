@@ -16,13 +16,12 @@ const Section: FC<SectionProps> = ({
   wrapperCN,
 }) => {
   const ellipseClassName = ellipse
-    ? `bg-gradient-to-bl rounded-full blur-[352px] ${ellipseMap[ellipse]} ${className} z-0 animate-smooth-appear`
+    ? `bg-gradient-to-bl rounded-full blur-[100px] ${ellipseMap[ellipse]} ${className} z-10 animate-smooth-appear`
     : "";
   return (
     <section className={`w-full relative ${wrapperCN}`}>
+      <div className="z-50 w-full h-[inherit] relative">{children}</div>
       <div className={ellipseClassName} />
-      {/* <div className="w-full h-full bg-[url('/images/textures.png')] bg-contain absolute left-0 top-0 bg-repeat z-10" /> */}
-      <div className="z-30 w-full h-fit">{children}</div>
     </section>
   );
 };

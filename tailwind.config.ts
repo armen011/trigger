@@ -36,8 +36,8 @@ const config: Config = {
           to: "#316484",
         },
         red: {
-          from: "#622E64",
-          to: "#E13951",
+          from: "#E13951",
+          to: "#622E64",
         },
         yellow: {
           from: "#D53E56",
