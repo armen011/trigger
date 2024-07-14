@@ -1,9 +1,10 @@
-import { Swiper, SwiperSlide, SwiperRef } from "swiper/react";
+import { Swiper, SwiperSlide } from "swiper/react";
 import { Swiper as SwiperType } from "swiper";
 import { Navigation } from "swiper/modules";
 import SliderArrowIcon from "@/assets/icon/slider_arrow.svg";
 import { FC, useCallback, useRef } from "react";
 import Typography from "@/components/Typography";
+import useResizeObserver from "use-resize-observer";
 import "swiper/css";
 
 type NavigationButtonProps = {
@@ -58,6 +59,7 @@ const SlideCard: FC<SlideCardProps> = ({ text, writer }) => {
 
 const Slider = () => {
   const swiperRef = useRef<null | SwiperType>(null);
+  const { ref, width } = useResizeObserver<HTMLDivElement>();
 
   const navigate = useCallback(
     (direction: "prev" | "next") => () => {
@@ -70,7 +72,10 @@ const Slider = () => {
     [swiperRef]
   );
   return (
-    <div className="mx-4 mb-[80px] md:mx-[40px] md:mb-[120px] xl:mx-[80px] xl:mb-[140px] 2xl:mx-[120px] 2xl:mb-[180px] md:gap-6 xl:gap-10 2xl:gap-12 md:flex">
+    <div
+      ref={ref}
+      className="mx-4 mb-[80px] md:mx-[40px] md:mb-[120px] xl:mx-[80px] xl:mb-[140px] 2xl:mx-[120px] 2xl:mb-[180px] md:gap-6 xl:gap-10 2xl:gap-12 md:flex"
+    >
       <div className="w-full flex justify-between md:w-fit mb-4 md:mb-0">
         <NavigationButton variant="prev" handleClick={navigate("prev")} />
         <NavigationButton
@@ -79,10 +84,9 @@ const Slider = () => {
           className="md:hidden"
         />
       </div>
-
       <Swiper
         spaceBetween={40}
-        slidesPerView={2}
+        slidesPerView={width && width < 768 ? 1 : 2}
         navigation={true}
         modules={[Navigation]}
         loop={true}
