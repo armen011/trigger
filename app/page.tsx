@@ -1,6 +1,6 @@
-import FirstSection from "./Components/FirstSection";
-import SecondSection from "./Components/SecondSection";
-import ThirdSection from "./Components/ThirdSection";
+import FirstSection from "./_components/FirstSection";
+import SecondSection from "./_components/SecondSection";
+import ThirdSection from "./_components/ThirdSection";
 
 const HomePage = () => {
   return (
