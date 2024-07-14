@@ -4,9 +4,7 @@ import { links } from "./utils";
 import { motion } from "framer-motion";
 
 const container = {
-  hidden: { opacity: 1 },
   visible: {
-    opacity: 1,
     transition: {
       delayChildren: 0.1,
     },
