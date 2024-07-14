@@ -3,8 +3,6 @@ import LinkButton from "../LinkButton";
 import { links } from "./utils";
 import { motion } from "framer-motion";
 
-import { useState } from "react";
-
 const container = {
   visible: {
     transition: {
@@ -13,7 +11,6 @@ const container = {
   },
 };
 const Links = () => {
-  const [isBurgerMenuOpened, setIsBurgerMenuOpened] = useState(false);
   return (
     <>
       <div className="hidden lg:block">
