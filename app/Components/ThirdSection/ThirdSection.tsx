@@ -3,11 +3,16 @@ import Section from "@/components/Section";
 import Typography from "@/components/Typography";
 import Slider from "./Slider";
 
+const thirdSectionEllipseWidthClassName =
+  "h-[652px] md:h-[652px] xl:h-[755px] w-[405px] md:w-[645px] xl:w-[746px]";
+const thirdSectionEllipsePositionClassName =
+  "-left-[180px] -md:left-[173px] -xl:left-[210px]";
+
 const ThirdSection = () => {
   return (
     <Section
       ellipse="red"
-      className="w-[746px] h-[755px] absolute -left-[200px] -top-1/3"
+      className={`${thirdSectionEllipseWidthClassName} absolute ${thirdSectionEllipsePositionClassName} bottom-0`}
     >
       <Typography
         variant="h1"

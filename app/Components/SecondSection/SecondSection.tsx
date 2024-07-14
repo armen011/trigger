@@ -1,13 +1,17 @@
 import Section from "@/components/Section";
 import Marquee from "./Marquee";
 import Partners from "./Partners";
-import Typography from "@/components/Typography";
+
+const firstSectionEllipseWidthClassName =
+  "h-[288px] md:h-[450px] xl:h-[521px] w-[380px] md:w-[592px] xl:w-[685px]";
+const firstSectionEllipsePositionClassName =
+  "-right-[288px] -md:right-[394px] -xl:right-[192px] -2xl:right-[272px]";
 
 const SecondSection = () => {
   return (
     <Section
       ellipse="yellow"
-      className="w-[685px] h-[521px] absolute -right-[200px] top-[100px] -rotate-90"
+      className={`${firstSectionEllipseWidthClassName} absolute ${firstSectionEllipsePositionClassName} rotate-[30deg] top-[100px] `}
       wrapperCN="w-full"
     >
       <Marquee />
