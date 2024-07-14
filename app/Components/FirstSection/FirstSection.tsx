@@ -13,7 +13,7 @@ const FirstSection = () => {
     <Section
       ellipse="green"
       className={`${firstSectionEllipseWidthClassName} absolute ${firstSectionEllipsePositionClassName}`}
-      wrapperCN="w-full h-[calc(100vh-40px)] lg:h-[calc(100vh-104px)] xl:h-[calc(100vh-104px)] 2xl:h-[calc(100vh-136px)] relative"
+      wrapperCN="w-full h-[calc(100vh-80px)] lg:h-[calc(100vh-104px)] xl:h-[calc(100vh-104px)] 2xl:h-[calc(100vh-136px)] relative"
     >
       <TriggerIcon className="absolute h-6 left-4 top-6 md:h-8 md:left-10 md:top-7 xl:h-10 xl:left-20 xl:top-9 2xl:h-12 2xl:top-10 2xl:left-32 z-50" />
       <Image
