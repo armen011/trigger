@@ -71,7 +71,7 @@ const firstMarqueeList = [
 const Partners = () => {
   return (
     <div className="flex flex-col items-center py-20 md:py-[120px] xl:py-[140px] 2xl:py-[180px]">
-      <Typography variant="h3" className="mb-10 md:mb-12 xl:mb-16 2xl:mb-20">
+      <Typography variant="h1" className="mb-10 md:mb-12 xl:mb-16 2xl:mb-20">
         They Trusted Us
       </Typography>
       <Marquee className="w-full" speed={100}>
