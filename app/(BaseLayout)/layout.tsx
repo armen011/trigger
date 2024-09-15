@@ -7,7 +7,7 @@ const BaseLayout = ({
   children: ReactNode;
 }>) => {
   return (
-    <div>
+    <div className="pt-20 md:pt-24 xl:pt-28 2xl:pt-36">
       <Header />
       {children}
     </div>

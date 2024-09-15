@@ -23,7 +23,10 @@ const Links = () => {
         <ColoredLinkButton href="/about-us" variant="red">
           Who We Are
         </ColoredLinkButton>
-        <ColoredLinkButton href="/portfolio" variant="yellow">
+        <ColoredLinkButton
+          href="/portfolio/influencer-marketing"
+          variant="yellow"
+        >
           Our Results
         </ColoredLinkButton>
       </div>

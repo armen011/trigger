@@ -1,3 +1,5 @@
+"use client";
+
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Swiper as SwiperType } from "swiper";
 import { Navigation } from "swiper/modules";
@@ -6,6 +8,7 @@ import { FC, useCallback, useRef } from "react";
 import Typography from "@/components/Typography";
 import useResizeObserver from "use-resize-observer";
 import "swiper/css";
+import { ReviewType } from "@/utils/cms/getReviews";
 
 type NavigationButtonProps = {
   variant: "prev" | "next";
@@ -57,7 +60,11 @@ const SlideCard: FC<SlideCardProps> = ({ text, writer }) => {
   );
 };
 
-const Slider = () => {
+type SliderProps = {
+  slides: ReviewType[];
+};
+
+const Slider: FC<SliderProps> = ({ slides }) => {
   const swiperRef = useRef<null | SwiperType>(null);
   const { ref, width } = useResizeObserver<HTMLDivElement>();
 
@@ -97,13 +104,13 @@ const Slider = () => {
           swiperRef.current = swiper;
         }}
       >
-        {Array.from({ length: 10 }).map((_, idx) => (
+        {slides.map(({ review, reviewer, reviewerPosition }, idx) => (
           <SwiperSlide key={idx} className="w-max">
             <SlideCard
-              text="This team responds promptly to every challenge and comes up with a SOLUTION to every problem. I can keep on talking about the working attitude, but what truly matters is that this team drives SALES, which is the cornerstone of effective marketing."
+              text={review}
               writer={{
-                name: "Narine Karapetyan",
-                position: "Head of Marketing at Global Credit UVC CJ",
+                name: reviewer,
+                position: reviewerPosition || "",
               }}
             />
           </SwiperSlide>

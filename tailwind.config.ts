@@ -67,9 +67,14 @@ const config: Config = {
           "0%": { opacity: "0.2" },
           "100%": { opacity: "1" },
         },
+        "open-from-right": {
+          "0%": { width: "0" },
+          "100%": { width: "100%" },
+        },
       },
       animation: {
         "smooth-appear": "smooth-opacity 200ms ease-in-out",
+        "right-open": "open-from-right 0.5s ease-in-out",
       },
     },
   },
