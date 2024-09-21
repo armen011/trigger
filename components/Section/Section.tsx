@@ -4,7 +4,7 @@ import { ellipseMap } from "./utils";
 
 type SectionProps = {
   ellipse?: EllipseVariant;
-  children: React.ReactNode;
+  children?: React.ReactNode;
   className?: string;
   wrapperCN?: string;
 };

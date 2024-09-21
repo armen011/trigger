@@ -8,8 +8,8 @@ const BaseLayout = ({
 }>) => {
   return (
     <div className="pt-20 md:pt-24 xl:pt-28 2xl:pt-36">
+      <div className="z-10">{children}</div>
       <Header />
-      {children}
     </div>
   );
 };

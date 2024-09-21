@@ -71,10 +71,15 @@ const config: Config = {
           "0%": { width: "0" },
           "100%": { width: "100%" },
         },
+        rotate: {
+          "0%": { transform: "rotate(0deg)" },
+          "100%": { transform: "rotate(360deg)" },
+        },
       },
       animation: {
         "smooth-appear": "smooth-opacity 200ms ease-in-out",
         "right-open": "open-from-right 0.5s ease-in-out",
+        rotate: "rotate 2s linear infinite",
       },
     },
   },

@@ -3,6 +3,7 @@ import { Color, Variant } from "./types";
 import { colors, titleVariants, variants } from "./utils";
 
 import localFont from "next/font/local";
+
 const staraFont = localFont({
   src: [
     {
